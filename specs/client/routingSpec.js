@@ -10,6 +10,7 @@ describe('Routing', function () {
 
   it('Should have /signup route, template, and controller', function () {
     expect($route.routes['/signup']).to.be.defined;
+    console.log($route.routes['/signup'].controller);
     expect($route.routes['/signup'].controller).to.equal('AuthController');
     expect($route.routes['/signup'].templateUrl).to.equal('app/auth/signup.html');
   });
@@ -22,6 +23,7 @@ describe('Routing', function () {
 
   it('Should have /links route, template, and controller', function () {
     expect($route.routes['/links']).to.be.defined;
+    console.log($route.routes['/links']);
     expect($route.routes['/links'].controller).to.equal('LinksController');
     expect($route.routes['/links'].templateUrl).to.equal('app/links/links.html');
   });
