@@ -1,17 +1,19 @@
-<div id='container'>
-  <h1>links</h1>
-  <script src="links.js"></script>
-  <div class = "link" ng-controller="LinksController">
-    <ul>
-      <li ng-repeat="link in data.links track by $index">
-        <img src="../assets/redirect_icon.png">
-        <div class = "title" >{{ link.title }}</div>
-        <div class = "original" >{{ link.url }}</div>
+<div id='container'> 
+<input ng-model="search" placeholder="filter"/>
 
-        <div class = "visits count">{{link.visits}}Visits </div>
-        <a ng-href="{{link.url}}"> {{link.baseUrl}}/{{link.code}}</a>
-      </li>
-    </ul>
+<h1>Links</h1>
+
+<div class="links">
+  <div class="link"
+      ng-repeat="link in data.links | filter:search | orderBy:'created_at'">
+    <img src="assets/redirect_icon.png">
+    <div class="info">
+      <div class="visits">
+        <span class="count">{{ link.visits }}</span>Visits
+      </div>
+      <div class="title">{{ link.title }}</div>
+      <div class="original">{{ link.url }}</div>
+      <a href="{{ link.baseUrl }}/{{ link.code }}">{{ link.baseUrl }}/{{ link.code }}</a>
+    </div>
   </div>
-  <a href="#/shorten">New URL to <strong>shorten</strong> ...</a>
 </div>

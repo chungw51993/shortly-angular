@@ -7,11 +7,12 @@ angular.module('shortly.shorten', [])
     Links.addOne($scope.link)
       .then(function(resp) {
         $scope.link = '';
+        $location.path('/');
         return resp;
       })
       .catch(function(err) {
         console.log(err);
       });
   };
-  $location.path('/shorten');
+  
 });
