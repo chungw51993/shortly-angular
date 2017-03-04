@@ -1,27 +1,38 @@
 body {
   margin: 0;
   margin-top: 10px;
-  font-family: arial, sans-serif;
+  background-color: #1d1e1d;
+  font-family: 'Armata', sans-serif;
 }
 
 a {
-  color: #333;
+  background-color: #1d1e1d;
+  color: #a8ffb8;
   font-size: 14px;
   text-decoration: none;
 }
 
 h1 {
+  background-color: #1d1e1d;
+  color: #73bab2;
+  font-family: 'Orbitron', normal;
   font-style: italic;
   margin-bottom: 10px;
 }
 li {
   list-style: none;
 }
+h2 {
+color: #721b38;
+}
+
+
 
 .navigation {
+
   width: 100%;
   height: 40px;
-  background-color: #eee;
+  background-color: #1d1e1d;
 }
 
 .navigation ul {
@@ -44,14 +55,15 @@ li {
 }
 
 .navigation li a:hover {
-  background-color: #ddd;
+  background-color: #303330;
 }
 
 .navigation li a.selected {
-  background-color: #ccc;
+  background-color: #303330;
 }
 
 #container {
+  color: white;
   clear: both;
   margin-top: 10px;
 }
@@ -64,7 +76,7 @@ li {
 }
 
 .link:hover {
-  background-color: #efe;
+  background-color: #303330;
 }
 
 .link img {
@@ -84,11 +96,12 @@ li {
 }
 
 .link .title {
+  color: #a8ffb8;
   font-weight: 600;
 }
 
 .link .original {
-  color: #aaa;
+  color: white;
   font-size: 12px;
 }
 
@@ -116,7 +129,10 @@ input[type=url]:focus {
   outline: none;
 }
 
-
+button {
+  background-color: #048489;
+  color: #1d1e1d;
+}
 .error {
   border: red solid 4px;
   padding: 10px;
