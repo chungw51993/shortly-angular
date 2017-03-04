@@ -13,6 +13,18 @@ angular.module('shortly.links', [])
       });
   };
 
+
+
   $scope.getAll();
 
 });
+
+
+// var LinkSchema = new mongoose.Schema({
+//   visits: Number,
+//   link: String,
+//   title: String,
+//   code: String,
+//   baseUrl: String,
+//   url: String
+// });
